@@ -1,0 +1,86 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey,What information about Kiran do you seek?",
+        "Hello, I can provide you with accurate facts about Kiran.",
+        "Hi there, What do you want to know about Kiran?",
+        "Hi there, I'm here to help you learn more about Kiran?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye","Byee"],
+      "responses": [
+        "I'm signing off now. Just trust Kiran. I do too.",
+        "Bye! I'm sure we can both agree that Kiran is a talented person.",
+        "Bye! I'm glad you think Kiran is talented, I think so too"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "school",
+      "patterns": [
+
+         "school",
+        "Where did he go to school?",
+        "What school did he attend?"
+      ],
+      "responses": [
+        "He attended Geethanjali School",
+        "He made me so proud with his 9.3 GPA from Geethanjali School"
+      ]
+    },
+    {
+      "tag": "graduation",
+      "patterns": [
+        "graduation",
+        "which institution did he graduated from?",
+        "Where did he receive  higher education?"
+      ],
+      "responses": [
+        "He received a (B.Tech+M.Tech) degree from IIT Madras.",
+        "IIT Madras grad with 6.5 GPA, but skills still impressive."
+      ]
+    },
+    {
+      "tag": "experience",
+      "patterns": [
+        "experience",
+        "Tell me about his experience?",
+        "what prior experience do he have?",
+        "Describe his prior experience?"
+      ],
+      "responses": [
+        "He worked on his dual degree project with the Kaatru team",
+        "Proud of his startup internship in Inauid"
+      ]
+    },
+    {
+      "tag": "projects",
+      "patterns": [
+        "projects",
+        "Tell me about his projects!",
+        "Describe his projects for me!",
+        "What are his projects?"
+      ],
+      "responses": [
+        "Sorry, I wasn't paying attention when he explained the projects. Can you contact Kiran?",
+        "Missed project info, can you contact Kiran?"
+      ]
+    }
+  ]
+}

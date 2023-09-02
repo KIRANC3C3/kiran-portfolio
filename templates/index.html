@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Personal Portfolio  Website</title>
+    <!--Iconsout CDN -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body class="black">
+   <nav>
+       <div class="container nav_container">
+           <!-- icon insert-->
+
+           <a href="index.html" class="nav_logo">
+               <img src="{{ url_for('static', filename='kc.jpg') }}" alt="Navbar Logo">
+
+           </a>
+           <ul class="nav_menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Projects</a></li>
+               <li><a href="#contact">Contact</a></li>
+               </ul>
+
+               <div class="nav_buttons">
+                   <button class="nav_theme_btn"><i class="uil uil-moon"></i></button>
+                   <button class="nav_toggle-open"><i class="uil uil-bars"></i></button>
+                   <button class="nav_toggle-close"><i class="uil uil-multiply"></i></button>
+               </div>
+
+
+       </div>
+
+   </nav>
+
+
+<!-- ==================  end nav ================= -->
+<header>
+
+    <div class="container header_container" id="home">
+        <article class="header_image" data-aos="fade-up">
+            <div><image src="{{ url_for('static', filename='kc.jpg') }}"  alt ="header image"></image></div>
+
+        </article>
+        <article class=" header_content">
+            <h4> Hi,I'm <span> Ajmeera Kiranchandra</span>.and I aspire to become a</h4>
+            <h3><span class="text"></span> </h3>
+            <p> A recent Dual-degree (BTech+MTech) chemical engineering graduate from IIT Madras. I worked on a dual degree project at IIT Madras with the Kaatru team on a real-world data science project.
+            </p>
+            <div class="header_cta">
+                <a href="#contact" class="btn primary">Hire me</a>
+                <a href="#project" class="btn">Portfolio</a>
+                <a href="AJMEERA Kiranchandra resume(ds) - Copy.pdf" class="btn primary" download target="_blank">Download CV  </a>
+            </div>
+
+        </article>
+        <ul class="header_socials">
+            <li><a href="https://www.linkedin.com/in/ajmeera-kiranchandra-709191182/" target="_blank"><i class="uil uil-linkedin"></i></a></li>
+            <li><a href="https://github.com/KIRANC3C3" target="_blank"><i class="uil uil-github"></i></i></a></li>
+            <li><a href="https://drive.google.com/drive/folders/18AtwhjkG1ShalpqU3yCNrnCHR1YLUW1I?usp=sharing" target="_blank"><i class="uil uil-google-drive"></i></i></a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- ========================== end of  header =======================-->
+
+    <!--<a href="AJMEERA Kiranchandra resume(ds) - Copy.pdf" class="btn primary" download target="_blank">
+        <i class="uil uil-download-alt"></i>
+    Download CV  </a>
+-->
+
+<section class="services " id="about">
+    <h1 > About Me </h1>
+    <div class="container services_container">
+        <ul class="services_left">
+            <li class="service_item edu active">
+                <span><i class="uil uil-graduation-cap"></i></span>
+                <div>
+                    <h3> Education</h3>
+                </div>
+            </li>
+            <li class="service_item exp">
+                <span> <i class="uil uil-bag"></i></span>
+                 <div>
+                    <h3> Experience</h3>
+                </div>
+            </li>
+            <li class="service_item skills ">
+                <span><i class="uil uil-award"></i></span>
+                 <div>
+                    <h3> Skills</h3>
+                </div>
+            </li>
+        </ul>
+        <article class="services_right" data-aos="fade-in" data-aos-delay="200">
+            <div id="skillsBars" class="skills_bars">
+  <!-- Skill bars will be inserted here dynamically -->
+  <div class="skill_bar">
+    <p>HTML</p>
+    <div class="bar"></div>
+  </div>
+  <div class="skill_bar">
+    <p>CSS</p>
+    <div class="bar"></div>
+  </div>
+  <!-- Add more skill bars as needed -->
+</div>
+
+            </article>
+            <!--<h3> Education</h3>
+            <li class="service_ritems">
+            <div class="box">
+                <h4>2018-2023</h4>
+                <h3>Graduation</h3>
+                <p>hhhhhhhhhhhhh</p>
+            </div>
+            </li>
+            <li class="service_ritems">
+            <div class="box">
+                <h4>2018-2023</h4>
+                <h3>Graduation</h3>
+                <p>hhhhhhhhhhhhh</p>
+            </div>
+            </li>
+            <li class="service_ritems">
+            <div class="box">
+                <h4>2018-2023</h4>
+                <h3>Graduation</h3>
+                <p>hhhhhhhhhhhhh</p>
+            </div>
+            </li>-->
+
+    </div>
+
+</section>
+
+<!--=========== end of about-->
+
+
+   <section class="projects" id="project">
+       <h1>Recent Projects</h1>
+        <div class="container projects_container">
+            <article class="projects"  >
+                <div class="project_image">
+                    <img  src="{{ url_for('static', filename='project1.png') }}" alt="project image">
+
+                </div>
+                <h3> Machine Learning WebApplication</h3>
+                <p>
+                    Developed an interactive web app using Python and Streamlit that allowed users to load, explore,
+                    visualize, and interact with data, and generate dashboards instantly.
+
+                </p>
+                <div class="project_cta">
+                    <a href="https://drive.google.com/drive/u/2/folders/18AtwhjkG1ShalpqU3yCNrnCHR1YLUW1I" class="btn sm primary" target="_blank">Demo</a>
+                    <a href="https://drive.google.com/drive/u/2/folders/18AtwhjkG1ShalpqU3yCNrnCHR1YLUW1I" class="btn sm " target="_blank">Github</a>
+
+                </div>
+            </article>
+            <article class="projects">
+                <div class="project_image">
+                    <img src="{{ url_for('static', filename='project1.png') }}"alt="project image">
+
+                </div>
+                <h3>  WhatsApp chat analyzer</h3>
+                <p>
+                     Developed a WhatsApp chat analyzer that analyzed various features of a chat, such as the most
+                        active user, most busy time period, and messages per user
+                </p>
+                <div class="project_cta">
+                    <a href="https://drive.google.com/drive/u/2/folders/18AtwhjkG1ShalpqU3yCNrnCHR1YLUW1I" class="btn sm primary" target="_blank">Demo</a>
+                    <a href="https://drive.google.com/drive/u/2/folders/18AtwhjkG1ShalpqU3yCNrnCHR1YLUW1I" class="btn sm " target="_blank">Github</a>
+
+                </div>
+            </article>
+
+            <article class="projects">
+                <div class="project_image">
+                    <img src="{{ url_for('static', filename='project1.png') }}" alt="project image">
+
+                </div>
+                <h3> Kaatru Team Project</h3>
+                <p>
+                    Collaborated with the team Kaatru to visualize data gathered from different static and mobile
+                  sensors to determine whether PM 2.5 values were in a hazardous range
+                </p>
+                <div class="project_cta">
+                    <a href="https://drive.google.com/drive/u/2/folders/18AtwhjkG1ShalpqU3yCNrnCHR1YLUW1I" class="btn sm primary" target="_blank">Demo</a>
+                    <a href="https://drive.google.com/drive/u/2/folders/18AtwhjkG1ShalpqU3yCNrnCHR1YLUW1I" class="btn sm " target="_blank">Github</a>
+
+                </div>
+            </article>
+
+            <article class="projects">
+                <div class="project_image">
+                    <img src="{{ url_for('static', filename='project1.png') }}" alt="project image">
+
+                </div>
+                <h3> Laptop repair website </h3>
+                <p>
+                       ●    Created a static laptop repair website using HTML, CSS, and JavaScript
+                </p>
+                <div class="project_cta">
+                    <a href="https://drive.google.com/drive/u/2/folders/18AtwhjkG1ShalpqU3yCNrnCHR1YLUW1I" class="btn sm primary" target="_blank">Demo</a>
+                    <a href="https://drive.google.com/drive/u/2/folders/18AtwhjkG1ShalpqU3yCNrnCHR1YLUW1I" class="btn sm " target="_blank">Github</a>
+
+                </div>
+            </article>
+
+            <article class="projects">
+                <div class="project_image">
+                    <img src="{{ url_for('static', filename='project1.png') }}" alt="project image">
+
+                </div>
+                <h3> SOYBEAN YIELD PREDICTION IN MADHYA PRADESH USING DEEP LEARNING TECHNIQUES
+</h3>
+                <p>
+                    Actively exploring existing methodologies for predicting soybean yield in Madhya Pradesh
+                </p>
+                <div class="project_cta">
+                    <a href="https://drive.google.com/drive/u/2/folders/18AtwhjkG1ShalpqU3yCNrnCHR1YLUW1I" class="btn sm primary" target="_blank">Demo</a>
+                    <a href="https://drive.google.com/drive/u/2/folders/18AtwhjkG1ShalpqU3yCNrnCHR1YLUW1I" class="btn sm " target="_blank">Github</a>
+
+                </div>
+            </article>
+
+            <article class="projects">
+                <div class="project_image">
+                    <img src="{{ url_for('static', filename='project1.png') }}" alt="project image">
+
+                </div>
+                <h3> Optimal Deployment Strategy for Ambient Air Pollution Sensing
+</h3>
+                <p>
+                    Collaborated with the Kaatru team and collected data from various static and mobile sensor devices. Our
+strategy involved deploying sensors in a way that maximized the coverage area
+                </p>
+                <div class="project_cta">
+                    <a href="https://drive.google.com/drive/u/2/folders/18AtwhjkG1ShalpqU3yCNrnCHR1YLUW1I" class="btn sm primary" target="_blank">Demo</a>
+                    <a href="https://drive.google.com/drive/u/2/folders/18AtwhjkG1ShalpqU3yCNrnCHR1YLUW1I" class="btn sm " target="_blank">Github</a>
+
+                </div>
+            </article>
+
+            <article class="projects">
+                <div class="project_image">
+                    <img src="{{ url_for('static', filename='project1.png') }}" alt="project image">
+
+                </div>
+                <h3>Prediction of  COVID-19 from Chest X-ray Images</h3>
+                <p>
+                    Built and trained a convolutional neural network (CNN) model from scratch in Keras with TensorFlow as the backend to predict COVID-19 from X-ray images
+                </p>
+                <div class="project_cta">
+                    <a href="https://drive.google.com/drive/u/2/folders/18AtwhjkG1ShalpqU3yCNrnCHR1YLUW1I" class="btn sm primary" target="_blank">Demo</a>
+                    <a href="https://drive.google.com/drive/u/2/folders/18AtwhjkG1ShalpqU3yCNrnCHR1YLUW1I" class="btn sm " target="_blank">Github</a>
+
+                </div>
+            </article>
+        </div>
+   </section>
+<!--=========== end of Project-->
+
+   <section class="contact" id="contact">
+       <div class="container contact_container">
+          <ul class="contact_list">
+              <li><a href="mailto:kiranchandrakc123@gmail.com" class="contact_list-item" target="_blank">
+                  <i class="uil uil-envelope"></i>
+              </a></li>
+              <li><a href="https://wa.me/+919705902611" class="contact_list-item" target="_blank">
+                  <i class="uil uil-whatsapp"></i>
+              </a></li>
+              <li><a href="tel:+919705902611" class="contact_list-item" target="_blank">
+                  <i class="uil uil-phone-alt"></i>
+              </a></li>
+              <li><a href="https://www.instagram.com/ajmeera.kiranchandra/" class="contact_list-item" target="_blank">
+                  <i class="uil uil-instagram"></i>
+              </a></li>
+
+          </ul>
+           <form action="https://formsubmit.co/kiranchandrakc123@gmail.com" method="POST" class="contact_form" data-aos="fade-up">
+               <input type="text" name="Name"placeholder="Full Name">
+               <input type="email" name="Email" placeholder="Email Address">
+               <textarea rows="7"  name="Message"placeholder="Message"></textarea>
+               <button type="Sumbit" class=" btn">Send</button>
+
+           </form>
+
+       </div>
+
+   </section>
+
+
+   <footer>
+       <div class="container footer_container">
+           <ul class="footer_menu">
+               <li ><a href="#home">Home</a></li>
+               <li ><a href="#about">About</a></li>
+               <li ><a href="#project">Projects</a></li>
+               <li ><a href="#contact">Contact</a></li>
+
+
+           </ul>
+           <ul class="footer_socials">
+               <li><a href="https://www.linkedin.com/in/ajmeera-kiranchandra-709191182/" target="_blank"><i class="uil uil-linkedin"></i></a></li>
+               <li><a href="https://github.com/KIRANC3C3" target="_blank"><i class="uil uil-github"></i></i></a></li>
+               <li><a href="https://drive.google.com/drive/folders/18AtwhjkG1ShalpqU3yCNrnCHR1YLUW1I?usp=sharing" target="_blank"><i class="uil uil-google-drive"></i></i></a></li>
+           </ul>
+
+       </div>
+       <div class="container footer_copyright">
+           <small> I did this website with my own hands (version-1) </small>
+       </div>
+   </footer>
+   <!--==========chat bot ====================-->
+
+   <div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-5--v1.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Chat support</h4>
+                    <p class="chatbox__description--header">Hi there, What do you want to know about Kiran?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button" >
+            <button><i class="uil uil-hipchat"></i></button>
+        </div>
+    </div>
+</div>
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+<script src="data.js"></script>
+<script src="index.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='app1.js') }}"></script>
+   <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+   <script type="text/javascript" src="{{ url_for('static', filename='data.js') }}"></script>
+<script>
+    $SCRIPT_ROOT = {{ request.script_root|tojson }};
+</script>
+</body>
+</html>

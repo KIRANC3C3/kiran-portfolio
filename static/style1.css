@@ -1,0 +1,1170 @@
+*{
+margin:0;
+padding:0;
+list-style:none;
+text-decoration:none;
+border:0
+outline:0;
+box-sizing:border-box;
+}
+
+:root{
+--container-width-lg:80%;
+--container-width-sm:94%;
+
+--radius-1:2rem;
+--radius-2:1.2rem;
+--radius-3:0.8rem;
+--radius-4:0.5rem;
+--radius-5:0.3rem;
+
+--transition:all 300ms ease;
+
+--primary-hue:200;
+--color-primary:hsl(var(--primary-hue),87%,44%);
+--color-nav-bg:hsla(var(--primary-hue),0%,100%,0.4);
+
+--color-gray-100:hsl(var(--primary-hue),0%,100%);
+--color-gray-200:hsl(var(--primary-hue),0%,95%);
+--color-gray-300:hsl(var(--primary-hue),0%,85%);
+--color-gray-400:hsl(var(--primary-hue),0%,70%);
+--color-gray-500:hsl(var(--primary-hue),0%,55%);
+--color-gray-600:hsl(var(--primary-hue),0%,40%);
+--color-gray-700:hsl(var(--primary-hue),0%,25%);
+--color-gray-800:hsl(var(--primary-hue),0%,15%);
+--color-gray-900:hsl(var(--primary-hue),0%,5%);
+}
+.dark{
+
+--color-gray-100:hsl(var(--primary-hue),0%,5%);
+--color-gray-200:hsl(var(--primary-hue),0%,15%);
+--color-gray-300:hsl(var(--primary-hue),0%,30%);
+--color-gray-400:hsl(var(--primary-hue),0%,40%);
+--color-gray-500:hsl(var(--primary-hue),0%,50%);
+--color-gray-600:hsl(var(--primary-hue),0%,60%);
+--color-gray-700:hsl(var(--primary-hue),0%,70%);
+--color-gray-800:hsl(var(--primary-hue),0%,80%);
+--color-gray-900:hsl(var(--primary-hue),0%,100%);
+
+--color-nav-bg:hsla(var(--primary-hue),0%,0%,0.4);
+
+
+}
+html{
+scroll-behavior:smooth;}
+
+body{
+font-family: 'Poppins', sans-serif;
+background: var(--color-gray-100);
+color:var(--color-gray-800);
+line-height:1.7;
+font-weight:300;
+}
+
+p,a,figcaption{
+font-size:0.85rem;
+}
+
+.container{
+width:var(--container-width-lg);
+margin-inline:auto;
+}
+
+img{
+display:block;
+width:100%
+object-fit:cover;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+font-family: 'outfit', sans-serif;
+line-height:1;
+}
+
+h1{
+font-size:3rem
+font-weight:800;
+}
+
+h2{
+font-size:2rem;
+}
+
+.btn{
+background:var(--color-gray-200);
+color:var(--color-gray-900);
+font-weight:500;
+display:inline-block;
+padding:1rem 2.5rem;
+border-radius:var(--radius-3);
+width:fit-content;
+cursor:pointer;
+transition:var(--transition);
+
+}
+
+.btn.sm{
+padding:0.4rem 1 rem;
+font-weight:400;
+border-radius:var(--radius-4)
+}
+
+.btn.primary{
+background:var(--color-primary);
+color:white;
+}
+
+.btn:hover{
+background:var(--color-gray-900)
+color:var(--color-gray-100);
+}
+
+section{
+padding:9rem 0;
+}
+
+section>h1,section>p{
+width:50%;
+test-align:center;
+margin-inline:auto;
+}
+section>h1{
+margin-bottom:0.5rem;
+}
+section:nth-child(odd){
+background:var(--color-gray-200);
+}
+
+/* ================================================NAV */
+nav{
+background:var(--color-nav-bg);
+border-bottom:1px solid var(--color-gray-300);
+display:grid;
+place-items:center;
+height:3.8rem;
+position:fixed;
+top:0;
+left:0;
+width:100vw;
+backdrop-filter:blur(15px);
+-webkit-backdrop-filter:blur(15px);
+-moz-backdrop-filter:blur(15px);
+-o-backdrop-filter:blur(15px);
+-ms-backdrop-filter:blur(15px);
+z-index:10;
+
+
+}
+.nav_container{
+display:flex;
+justify-content:space-between;
+}
+
+.nav_logo{
+width:2.4rem;
+aspect-ratio:1/1;
+border-radius:50%;
+overflow:hidden;
+}
+
+.nav_menu{
+display:flex;
+align-items:center;
+gap:8rem;/* adujusted 3 to 12 rem */
+}
+
+.nav_menu a{
+color:var(--color-gray-900);
+
+}
+
+.nav_menu i{
+font-size:1.5rem;/* Adjust the size as needed */
+}
+
+.nav_menu a:hover{
+background:var(--color-primary);
+color:var(--color-gray-100)
+transform:translate(-0.5rem);
+}
+
+.nav_toggle-open,.nav_toggle-close{
+display:none;
+
+}
+
+.nav_theme_bt{
+color:var(--color-gray-900);
+background:transparent;
+font-size:2.2rem;
+cursor:pointer;
+}
+
+.nav_theme_btn i {
+  font-size: 1.9rem; /* Adjust the font size as needed */
+}
+
+
+/* ================================================header===== */
+
+header{
+display:grid;
+place-items:center;
+min-height:100vh;
+}
+.header_container{
+margin-top:3rem;
+position:relative;
+
+}
+
+
+.header_image {
+  width: 100%;
+  max-width: 14rem; /* Limit the width to 14rem */
+  max-height: 17rem;
+  margin: 0 auto;
+  border-radius: 7rem 7rem var(--radius-2) var(--radius-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.header_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+
+.header_content{
+text-align:center;
+margin-top:2rem;
+width:40rem;
+margin-inline:auto;
+
+}
+
+.header_content h4{
+margin-bottom:0.7rem;
+}
+
+.header_content h4 span{
+color:var(--color-primary);
+}
+.text{
+color:var(--color-primary);
+}
+
+.header_content p{
+margin:0.8rem 0.2rem;
+
+}
+
+.header_cta{
+display:flex;
+gap:1.5rem;
+align-items:center;
+justify-content:center;
+
+}
+
+.header_socials{
+margin-right:29rem;
+margin-top:7rem;
+position:absolute;
+top:0;
+right:0;
+display:flex;
+flex-direction:column;
+gap:1.1rem;
+
+}
+
+.header_socials i{
+font-size:1.5rem;/* Adjust the size as needed */
+}
+
+.header_socials a{
+background:var(--color-gray-200)
+color:var(--color-gray-900)
+
+padding:0.5rem;
+display:inline-block;
+border-radius:var(--radius-4);
+transition:var(--transition);
+}
+.header_socials a:hover{
+background:var(--color-primary);
+color:var(--color-gray-100)
+transform:translate(-0.5rem);
+}
+
+/* ================================================ABOUT =====
+
+/* ================================================ABOUT =====*/
+section > h1{
+text-align:center;
+margin-inline:auto;
+}
+
+.services_container{
+display:grid;
+grid-template-columns:1fr 2fr;
+gap:6rem;
+margin-top:4rem;
+text-align:center;
+}
+
+.services_left{
+display:flex;
+flex-direction:column;
+gap:1rem;
+
+margin-left:2rem;
+
+}
+
+.services_left li {
+    display: flex;
+    /* flex-direction: column; /* This makes the items display vertically */
+    gap: 1.5rem;
+    align-items: center;
+    border: 5px solid var(--color-gray-300);
+    border-radius: var(--radius-10);
+    padding: 1rem 6rem;
+    cursor: pointer;
+}
+
+
+
+.services_left li span{
+background:var(--color-primary);
+color:var(--color-gray-200);
+padding:0.5rem;
+border-radius:50%;
+font-size:1.3rem;
+}
+
+.services_left li h3{
+margin-bottom:0.5rem;
+}
+
+.services_right{
+border-left:1px solid var(--color-primary);
+padding-left:1.5rem;
+
+}
+
+.services_right li{
+    display: flex;
+    /* flex-direction: column; /* This makes the items display vertically */
+    gap: 1.5rem;
+    align-items: center;
+    border: 5px solid var(--color-gray-200);
+    border-radius: var(--radius-10);
+    padding:0.5rem;
+    cursor: pointer;
+}
+
+.services_left li:hover,.services_left li.active{
+background:var(--color-gray-300)
+}
+.services_right h3{
+
+margin-above:5rem;
+
+}
+
+/* Styles for timeline and timeline items */
+.timeline {
+  position: relative;
+  margin-top: 20px;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for each item in the timeline */
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 7px;
+}
+
+/* Styling for the heading within each timeline item */
+.timeline-item h4 {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+/* Styling for the paragraph within each timeline item */
+.timeline-item p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* Styling for the dot before each timeline item */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #007bff; /* Timeline dot color */
+  border-radius: 50%;
+}
+
+/* Styling for the boxes section */
+.boxes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+/* Styling for each individual box */
+.box {
+  flex: 0 0 calc(33.33% - 20px); /* Make boxes take up 33.33% width with some margin */
+  background-color: #ff0000; /* Red background color */
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styling for the heading within each box */
+.box h4 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #87CEEB; /* Red color for the heading */
+}
+
+/* Styling for the paragraph within each box */
+.box p {
+  margin: 5px 0;
+  font-size: 16px;
+  background:var(--color-gray-100)
+}
+
+/* Styling for vertical boxes */
+.vertical-boxes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+/* Styling for each individual box in the vertical layout */
+.box {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styling for the heading within each vertical box */
+.box h4 {
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2971fe; /* Red color for the heading */
+}
+
+/* Styling for the paragraph within each vertical box */
+.box p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* Styling for the degree box */
+.box.degree {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Styles for the skill bars */
+.skill-bar {
+  background-color: #f5f5f5;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  width: 0;
+  background-color: #007bff; /* Change to the color you prefer */
+  transition: width 0.5s ease-in-out;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.skill-text {
+  margin-right: 10px;
+  color: white; /* Adjust text color as needed */
+  font-weight: bold;
+}
+
+/* Style for the skill bars */
+.skill_bar {
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.bar {
+  height: 100%;
+  width: 0;
+  background-color: #6c63ff; /* Change this color to match your design */
+  border-radius: 5px;
+  animation: fill-bar 2s ease-out; /* Adjust animation duration as needed */
+}
+
+/* Animation for the skill bars */
+@keyframes fill-bar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+/* =========================== projects ============= */
+
+.projects_container{
+margin-top:3rem;
+
+display:grid;
+grid-template-columns: repeat(auto-fill,minmax(30rem,15fr));
+gap:3.5 rem;
+cursor:pointer;
+
+}
+
+.projects{
+background:var(--color-gray-300);
+padding:-3rem;
+border-radius:var(--radius-3);
+transition:var(--transition);
+
+}
+
+.project.hover{
+box-shadow:0 3rem 2 rem rgba(0,0,0,0.1);
+background:var(--color-gray-300);
+transition:var(--transition)
+}
+
+.project_image{
+height:auto;
+max-height:8rem;
+margin-bottom:1.5rem;
+border-radius:var(--radius-3);
+overflow:hidden;
+}
+
+.project p{
+margin:0.5rem 1.5rem;
+}
+
+.project_cta{
+display:flex;
+gap:2rem;
+margin-bottom:1rem
+}
+
+/* =========================== contact ============= */
+
+section.contact{
+background:var(--color-primary);
+}
+
+.contact_container{
+width:50%;
+display:grid;
+grid-template-columns: 1fr 9fr;
+gap:6rem
+}
+
+.contact_list{
+display:flex;
+flex-direction:column;
+gap:1.4rem;
+
+}
+.contact_list-item{
+background:var(--color-gray-100);
+padding:1rem;
+display:block;
+text-align:center;
+color:var(--color-gray-900);
+border-radius:var(--radius-3);
+font-size:1.6rem;
+transition:var(--transition);
+}
+
+.contact_list-item:hover{
+background:var(--color-gray-900);
+color:var(--color-gray-100);
+}
+
+.contact_form{
+display:flex;
+flex-direction:column;
+gap:1.5rem;
+}
+
+.contact_form input,.contact_form textarea{
+background:transparent;
+border:1px solid var(--color-gray-300);
+border-radius:var(--radius-3);
+padding:1rem;
+color:var(--color-gray-100);
+resize:none;
+
+}
+
+.contact_form input::placeholder,contact_form textarea::placeholder{
+color:var(--color-gray-100)
+}
+.contact_form.btn{
+background:var(--color-gray-100);
+color:var(--color-gray-900);
+}
+
+/* =========================== footer ============= */
+
+footer{
+background:hsl(var(--primary-hue),5%,5%);
+padding-top:7rem
+}
+.footer_menu{
+display:flex;
+gap:3rem;
+justify-content:center;
+}
+
+.footer_menu a{
+color:hsl(var(--primary-hue),5%,70%);
+transition:var(--transition);
+}
+
+.footer_menu a :hover{
+color:#ffffff;
+}
+
+.footer_socials{
+width:fit-content;
+display:flex;
+gap:1.5rem;
+margin:3rem auto 4rem
+}
+.footer_socials a {
+background:#ffffff;
+color:rgb(16,1,31);
+padding:0.6rem;
+display:flex;
+border-radius:50%;
+transition:var(--transition);
+
+}
+
+
+.footer_socials a:hover{
+background:var(--color-primary);
+color:var(--color-gray-100)
+transform:translate(-5.5rem);
+
+
+}
+
+.footer_copyright{
+color:hsl(var(--primary-hue),5%,70%);
+text-align:center;
+border-top:2px solid hsl(var(--primary-hue),5%,25%);
+padding:1.5rem 0;
+}
+
+
+/* =========================== media ============= */
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+
+
+  /* Adjust font sizes for smaller screens */
+  h1 {
+    font-size: 1.8rem;
+  }
+  p, a, figcaption {
+    font-size: 1.5rem;
+  }
+
+  /* Adjust container width for smaller screens */
+  .container {
+    width: var(--container-width-sm);
+  }
+
+  /* Adjust padding in sections */
+  section {
+    padding: 7rem 0;
+  }
+
+  /* Adjust width for headers, sections, and footers */
+  section > h1,
+  section > p {
+    width: var(--container-width-sm);
+  }
+
+  /* Make navigation menu responsive */
+  .nav_menu {
+    position: fixed;
+    right: 0;
+    top: 3.8rem;
+    flex-direction: column;
+    gap: 0;
+    width: fit-content;
+    background: var(--color-nav-bg); /* Add background color to the menu */
+    display:none;
+  }
+  /* Styling for navigation menu items */
+.nav_menu li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem; /* Adjust padding as needed */
+  background: var(--color-gray-500);
+  border: 2.5px solid var(--color-gray-300);
+  border-radius: var(--radius-3);
+  box-shadow: -2rem 5rem 5rem rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav_menu li a {
+  color: var(--color-gray-900);
+  font-size: 1.2rem; /* Adjust font size as needed */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for navigation menu items */
+.nav_menu li:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-gray-100);
+}
+.nav_toggle-open,.nav_toggle-close{
+display:inline-block;
+background:transparent;
+font-size:1.5rem;
+color:var(--color-gray-900);
+}
+.nav_toggle-close{
+display:none;
+}
+
+.nav_buttons{
+display:flex;
+align-items:center;
+gap:1.5rem;
+}
+
+header{
+height:115vh;
+
+}
+
+.header_socials{
+display:none;
+}
+
+.header_image{
+width:32vw;
+aspect-ratio:4/5;
+position: relative;
+overflow: hidden;
+}
+/* Styles for the header content */
+.header_content {
+  width: 100%;
+  text-align: center; /* Center-align the content */
+}
+
+.header_content h4 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.header_content h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.header_content p {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+
+/* Styles for the header CTA buttons */
+.header_cta {
+  display: flex;
+  flex-direction: row; /* Align buttons horizontally by default */
+  justify-content: space-between; /* Add space between buttons */
+  margin-top: 1.5rem; /* Add margin to separate from content */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .header_content h4 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .header_content h3 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .header_content p {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  .header_cta {
+    flex-direction: column; /* Align buttons vertically on small screens */
+    gap: 0.5rem; /* Add some spacing between buttons */
+  }
+
+  .header_cta a {
+    width: 100%; /* Make the buttons full width */
+  }
+
+
+}
+
+
+.services_container{
+grid-template-columns:1fr;
+gap:2rem;
+}
+.services_right{
+padding:0;
+border:0;
+
+/* Styles for the "About Me" section */
+.services_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  padding: 2rem; /* Add padding for better spacing */
+}
+
+.services_left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service_item {
+  margin: 0.5rem 0;
+}
+
+.services_right {
+  flex: 1; /* Allow right content to expand and take available space */
+  max-width: 100%; /* Ensure content doesn't overflow */
+}
+.vertical-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Adjust the gap as needed */
+
+  /* Other styling properties for larger screens */
+}
+
+/* Apply styles for small screens */
+@media screen and (max-width: 768px) {
+
+  .services_container {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center;
+    width: 100%; /* Set the width to 100% on small screens */
+  }
+  .services_left li {
+    padding: 1rem 2rem; /* Adjust padding for smaller screens */
+  }
+
+
+  .services_left {
+    margin-bottom: 1.5rem; /* Add spacing between left and right content */
+  }
+  .vertical-boxes {
+    gap: 1rem; /* Adjust the gap for smaller screens */
+  }
+
+  .service_item {
+    margin: 0.5rem 0;
+  }
+}
+
+}
+/* Styles for the "Recent Projects" section */
+.projects_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Apply styles for small screens */
+@media screen and (max-width: 768px) {
+  .projects_container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Adjust image size on small screens */
+  .project_image img {
+    max-width: 100%; /* Make images fill the available width */
+    height: auto; /* Keep the aspect ratio */
+  }
+}
+
+.projects_container{
+gap:1rem;
+}
+.contact_container{
+grid-template-columns:1fr;
+gap:3rem;
+}
+.contact_list{
+flex-direction:row;
+justify-content:center;
+}
+.footer_menu{
+flex-direction:column;
+gap:1.6rem;
+align-items:center;
+}
+}
+
+/* ===============            CHATBOX            =============== */
+/* chatbot style */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 100%;
+    background: white;
+}
+
+*, html {
+    --primaryGradient: linear-gradient(93.12deg, #2971fe 0.52%, #29cbfe 100%);
+    --secondaryGradient: linear-gradient(268.91deg, #2971febf -2.14%, #1d82e7 99.69%);
+    --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
+    --primary: #007bff;
+
+}
+
+
+.chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* CONTENT IS CLOSE */
+.chatbox__support {
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    max-width: 90%;
+    width: auto;
+    height: 350px;
+    z-index: -123456;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+/* CONTENT ISOPEN */
+.chatbox--active {
+    transform: translateY(0,0);
+    z-index: 123456;
+    opacity: 1;
+
+}
+
+/* BUTTON */
+.chatbox__button {
+    text-align: right;
+    font-size: 50px;
+    padding: 50px 50px; /* Adjust padding for button size */
+}
+
+.send__button {
+    padding: 6px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* HEADER */
+.chatbox__header {
+    position: sticky;
+    top: 0;
+    background: orange;
+}
+
+/* MESSAGES */
+.chatbox__messages {
+    margin-top: auto;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+}
+
+.messages__item {
+    background: orange;
+    max-width: 60.6%;
+    width: fit-content;
+}
+
+.messages__item--operator {
+    margin-left: auto;
+}
+
+.messages__item--visitor {
+    margin-right: auto;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    position: sticky;
+    bottom: 0;
+}
+
+.chatbox__support {
+    background: #f9f9f9;
+    height: 450px;
+    width: 350px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* HEADER */
+.chatbox__header {
+    background: var(--primaryGradient);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: var(--primaryBoxShadow);
+}
+
+.chatbox__image--header {
+    margin-right: 10px;
+
+}
+
+
+.chatbox__heading--header {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.chatbox__description--header {
+    font-size: .9rem;
+    color: white;
+}
+
+/* Messages */
+.chatbox__messages {
+    padding: 0 20px;
+}
+
+.messages__item {
+    margin-top: 10px;
+    background: #E0E0E0;
+    padding: 8px 12px;
+    max-width: 70%;
+}
+
+.messages__item--visitor,
+.messages__item--typing {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.messages__item--operator {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: lightblue;
+    color: white;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background: var(--secondaryGradient);
+    box-shadow: var(--secondaryBoxShadow);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 20px;
+}
+
+.chatbox__footer input {
+    width: 80%;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 30px;
+    text-align: left;
+}
+
+.chatbox__send--footer {
+    color: white;
+}
+
+.chatbox__button button,
+.chatbox__button button:focus,
+.chatbox__button button:visited {
+    padding: 23px;
+    background: #007bffb8;
+    border: none;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.uil.uil-hipchat {
+    font-size: 30px; /* Adjust this value for icon size */
+  }
+
